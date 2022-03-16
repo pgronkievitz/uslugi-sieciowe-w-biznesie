@@ -1,0 +1,21 @@
+#+title: Rozpraszanie obliczeń z pomocą kolejkowania
+#+subtitle: Usługi sieciowe w biznesie
+#+author: Patryk Gronkiewicz 164157
+#+options: todo:nil tags:nil
+#+language: pl
+#+latex_class: article
+#+filetags: uczelnia usb
+
+* DONE Wstęp
+W projekcie został wykorzystany język Python. Został on wybrany ze względu na prostotę i zaznajomienie z nim. W celu połączenia serwisów napisanych w Pythonie rozważono kilka możliwości:
++ Kafka ::  Jest systemem kolejkowania, bardzo rozbudowana;
++ NSQ :: Podstawowa kolejka;
++ RabbitMQ :: Message Broker, jedno z najczęściej używanych rozwiązań w usługach kierowanych na Kubernetesa oraz inne orkiestratory (np. RedHat OpenShift).
+Każde z tych rozwiązań ma bardzo różnorodne zalety. Przykładowo Kafka jest najbardziej rozbudowanym systemem, który pozwala nawet na zachowanie części informacji ,,na później'' przez tabele, a NSQ jest bardzo lekką alternatywą, która w zasadzie obsługuje jedynie kolejkowanie i gwarantuje przynajmniej jednokrotne odczytanie każdej z danych.
+* TODO Implementacja generatora danych
+* TODO Implementacja przetwarzania danych
+* PROJ Połączenie serwisów
+** TODO Kafka
+** TODO RabbitMQ
+** TODO NSQ
+* TODO Podsumowanie
